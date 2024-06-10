@@ -37,11 +37,9 @@ const tabs = [
  * The sign up page.
  */
 function SignUpPage() {
-	const [selectedTabId, setSelectedTabId] = useState(tabs[0].id);
+	const [selectedTabId, setSelectedTabId] = useState('firebase');
 
-	function handleSelectTab(id: string) {
-		setSelectedTabId(id);
-	}
+	
 
 	return (
 		<div className="flex min-w-0 flex-1 flex-col items-center sm:flex-row sm:justify-center md:items-start md:justify-start">
@@ -66,32 +64,7 @@ function SignUpPage() {
 						</Link>
 					</div>
 
-					<Tabs
-						value={_.findIndex(tabs, { id: selectedTabId })}
-						variant="fullWidth"
-						className="w-full mt-24 mb-32"
-						indicatorColor="secondary"
-					>
-						{tabs.map((item) => (
-							<Tab
-								onClick={() => handleSelectTab(item.id)}
-								key={item.id}
-								icon={
-									<img
-										className={item.logoClass}
-										src={item.logo}
-										alt={item.title}
-									/>
-								}
-								className="min-w-0"
-								label={item.title}
-							/>
-						))}
-					</Tabs>
-
-					{selectedTabId === 'jwt' && <JwtSignUpTab />}
-					{selectedTabId === 'firebase' && <FirebaseSignUpTab />}
-					{selectedTabId === 'aws' && <AwsSignUpTab />}
+					 <FirebaseSignUpTab />
 				</div>
 			</Paper>
 
@@ -163,8 +136,7 @@ function SignUpPage() {
 
 				<div className="relative z-10 w-full max-w-2xl">
 					<div className="text-7xl font-bold leading-none text-gray-100">
-						<div>Welcome to</div>
-						<div>our community</div>
+						<div>MIGREATION</div>
 					</div>
 					<div className="mt-24 text-lg leading-6 tracking-tight text-gray-400">
 						Fuse helps developers to build organized and well coded dashboards full of beautiful and rich

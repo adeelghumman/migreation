@@ -16,9 +16,6 @@ function FuseSplashScreen() {
 					alt="logo"
 				/>
 			</div>
-			<div>
-				splash screen 
-			</div>
 			<Box
 				id="spinner"
 				sx={{
