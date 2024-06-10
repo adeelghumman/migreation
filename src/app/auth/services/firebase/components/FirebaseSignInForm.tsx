@@ -50,8 +50,8 @@ function FirebaseSignInForm() {
 	const { isValid, dirtyFields, errors } = formState;
 
 	useEffect(() => {
-		setValue('email', 'ajaved@cinnova.com', { shouldDirty: true, shouldValidate: true });
-		setValue('password', 'cinnova123', { shouldDirty: true, shouldValidate: true });
+		setValue('email', 'example@email.com', { shouldDirty: true, shouldValidate: true });
+		setValue('password', 'password', { shouldDirty: true, shouldValidate: true });
 	}, [setValue]);
 
 	function onSubmit(formData: FormType) {
